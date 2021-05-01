@@ -5,8 +5,12 @@
 
 @import "variables";
 
+@import "about";
+@import "contact";
 @import "header";
 @import "footer";
+@import "portfolio";
+@import "portfolio-home";
 
 body {
   min-height: 100vh;

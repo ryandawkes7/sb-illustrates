@@ -1,0 +1,26 @@
+#about {
+  padding: 1.5rem 0;
+  background: $yellow;
+
+  .about_container {
+    flex-direction: column;
+
+    .profile_image {
+      border-radius: 0.5rem;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  @media (min-width: 576px) {
+  }
+  @media (min-width: 768px) {
+     padding: 3rem 0;
+    .about_container {
+      flex-direction: row;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+}
