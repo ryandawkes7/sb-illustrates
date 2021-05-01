@@ -1,22 +1,23 @@
 import React from 'react';
 
-export const Header = () => {
+export const Header = (props) => {
 
+  const headerRef = props.headerRef;
   const publicPath = process.env.PUBLIC_URL;
 
   return (
-    <header id="header">
-      <div class="navbar navbar-light navbar-backdrop">
-        <nav class="navbar navbar-expand-lg w-100">
+    <header id="header" ref={headerRef}>
+      <div className="navbar navbar-light navbar-backdrop">
+        <nav className="navbar navbar-expand-lg w-100">
 
           {/* Brand */}
-          <a href="/" class="navbar-brand col-8 col-md-2">
+          <a href="/" className="navbar-brand col-8 col-md-2">
             <img src={`${publicPath}/assets/logo-wide.png`} alt="SB Illustrates" />
           </a>
 
           {/* Toggler (Mobile) */}
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarNav"
@@ -24,19 +25,19 @@ export const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           {/* Links */}
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/portfolio">
+              <li className="nav-item">
+                <a className="nav-link" href="/portfolio">
                   Portfolio
                 </a>
               </li>
