@@ -1,0 +1,38 @@
+// GLOBAL
+#header {
+
+  .navbar-backdrop {
+    background: $pink-gradient;
+    nav {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    .navbar-brand {
+      padding: 0 !important;
+      img {
+        max-height: 40px;
+        width: auto;
+        display: block;
+      }
+    }
+  }
+
+  // SMALL
+  @media (min-width: 576px) {
+  }
+  @media(min-width: 768px) {
+    .navbar-brand {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media(min-width: 1200px) {
+  }
+}

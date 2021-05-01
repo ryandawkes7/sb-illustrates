@@ -1,0 +1,50 @@
+import React from 'react';
+
+export const Header = () => {
+
+  const publicPath = process.env.PUBLIC_URL;
+
+  return (
+    <header id="header">
+      <div class="navbar navbar-light navbar-backdrop">
+        <nav class="navbar navbar-expand-lg w-100">
+
+          {/* Brand */}
+          <a href="/" class="navbar-brand col-8 col-md-2">
+            <img src={`${publicPath}/assets/logo-wide.png`} alt="SB Illustrates" />
+          </a>
+
+          {/* Toggler (Mobile) */}
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          {/* Links */}
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/portfolio">
+                  Portfolio
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+        </nav>
+      </div>
+    </header>
+  )
+}
