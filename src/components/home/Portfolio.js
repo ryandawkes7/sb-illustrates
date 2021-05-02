@@ -6,8 +6,6 @@ export const Portfolio = () => {
   const per = document.getElementById("personal");
   const com = document.getElementById("commission");
 
-  if (per) console.log(per.children);
-
   if (uni && per && com) {
     catSlider(uni, per, com);
     catSlider(per, uni, com);
