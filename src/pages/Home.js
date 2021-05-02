@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { About } from '../components/home/About';
 import { Contact } from '../components/home/Contact';
 import { Portfolio } from '../components/home/Portfolio';
