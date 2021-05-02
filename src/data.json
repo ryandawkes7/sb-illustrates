@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "image": "/img/art/abstract-art.JPG",
+        "image": "assets/art/abstract-art.JPG",
         "title": "Rosa Parks",
         "category": "Commission",
         "description": "Lorem ipsum",
@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "image": "/img/art/abstract-wilton.JPG",
+        "image": "assets/art/abstract-wilton.JPG",
         "title": "Wilton Care Home",
         "category": "Commission",
         "description": "Lorem ipsum",
@@ -19,7 +19,7 @@
     },
     {
         "id": 3,
-        "image": "/img/art/baby-sketch.JPG",
+        "image": "assets/art/baby-sketch.JPG",
         "title": "Baby Portrait",
         "category": "Commission",
         "description": "Lorem ipsum",
@@ -28,7 +28,7 @@
     },
     {
         "id": 4,
-        "image": "/img/art/back-to-the-future.JPG",
+        "image": "assets/art/back-to-the-future.JPG",
         "title": "Back to the Future",
         "category": "Commission",
         "description": "Lorem ipsum",
@@ -37,7 +37,7 @@
     },
     {
         "id": 5,
-        "image": "/img/art/family-pencil.JPG",
+        "image": "assets/art/family-pencil.JPG",
         "title": "Family Portrait",
         "category": "Commission",
         "description": "Lorem ipsum",
@@ -46,7 +46,7 @@
     },
     {
         "id": 6,
-        "image": "/img/art/food-stereotype.JPG",
+        "image": "assets/art/food-stereotype.JPG",
         "title": "Food Stereotyping",
         "category": "University",
         "description": "Lorem ipsum",
@@ -55,7 +55,7 @@
     },
     {
         "id": 7,
-        "image": "/img/art/harry-styles.JPG",
+        "image": "assets/art/harry-styles.JPG",
         "title": "Harry Styles Portrait",
         "category": "Personal",
         "description": "Lorem ipsum",
@@ -64,7 +64,7 @@
     },
     {
         "id": 8,
-        "image": "/img/art/taunton-digital.JPG",
+        "image": "assets/art/taunton-digital.JPG",
         "title": "Taunton Town Centre",
         "category": "Commission",
         "description": "Lorem ipsum",
@@ -73,7 +73,7 @@
     },
     {
         "id": 9,
-        "image": "/img/art/travis-scott.JPG",
+        "image": "assets/art/travis-scott.JPG",
         "title": "Travis Scott Portrait",
         "category": "Commission",
         "description": "Lorem ipsum",
@@ -82,7 +82,7 @@
     },
     {
         "id": 10,
-        "image": "/img/art/tyler-blue.JPG",
+        "image": "assets/art/tyler-blue.JPG",
         "title": "Tyler the Creator - Blue",
         "category": "Personal",
         "description": "Lorem ipsum",
@@ -91,7 +91,7 @@
     },
     {
         "id": 11,
-        "image": "/img/art/tyler-brown.JPG",
+        "image": "assets/art/tyler-brown.JPG",
         "title": "Tyler the Creator - Brown",
         "category": "University",
         "description": "Lorem ipsum",
