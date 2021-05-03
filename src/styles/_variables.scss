@@ -1,9 +1,56 @@
-$pink-gradient: linear-gradient(180deg, #FCE7FF 0%, #FBDBFF 100%);
+$pink-gradient: #FCE7FF;
 $pink: #EDC8EA;
 $dark_pink: #d483cf;
 $card_footer: #FFB4B4;
 $purple: #C38FC9;
-$salmon: #FFDADA;
+
 $yellow: #F4FFDD;
 $light_green: #E5FFF5;
 $dark_green: #D1FCEB;
+
+
+
+$mauve-100: #fae5f8;
+$mauve-200: #f3d5f1;
+$mauve-300: #e6a5df;
+$mauve-500: #C588BF;
+$mauve-700: #b466ac;
+
+$bubblegum-300: #EEC8EA;
+$bubblegum-500: #e7b2e2;
+$bubblegum-700: #eb9ee3;
+
+$charcoal-300: #474747;
+$charcoal-500: #363636;
+$charcoal-700: #292929;
+
+$orange-300: #ec9577;
+$orange-500: #E1805F;
+$orange-700: #cc6644;
+
+$turqoise-500: #b3e6d2;
+
+$orchard-100: #fbffe1;
+$orchard-300: #bfc588;
+$orchard-500: #99a056;
+$orchard-700: #767e2c;
+
+$green-100: #e3ffe6;
+$green-200: #b6e6bb;
+$green-300: #88c58e;
+$green-500: #56a35e;
+$green-700: #378b3f;
+
+$sage-300: #a6caaa;
+$sage-500: #7ba880;
+$sage-700: #659969;
+$sage-900: #318139;
+
+$oriental-pink-300: #c58e88;
+$oriental-pink-500: #ad655d;
+$oriental-pink-700: #97443b;
+
+.modal-content {
+  background-color: transparent !important;
+  border: none !important
+}
