@@ -9,6 +9,7 @@
 @import "contact";
 @import "header";
 @import "footer";
+@import "modal";
 @import "portfolio";
 @import "portfolio-home";
 
@@ -42,6 +43,13 @@ li {
 
 .h-33 {
   height: 33.33334%;
+}
+
+.h-90 {
+  height: 90%;
+}
+.w-90 {
+  width: 90%;
 }
 
 @media (min-width: 576px) {
