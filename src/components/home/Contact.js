@@ -7,35 +7,43 @@ export const Contact = () => {
       
       {/* Desktop */}
       <div className="d-none d-md-flex w-100 px-100">
-        {/* Social Links */}
         <div className="col-6 d-flex justify-content-center">
           <div className="col-12 d-flex flex-column justify-content-center align-items-center h-100 py-5 px-100 contact_box">
+
             {/* Logo */}
             <div className="logo_image d-flex my-3">
               <img src={`${process.env.PUBLIC_URL}/assets/logo.png`} alt="SB Illustrates" />
             </div>
+
             {/* Social Links */}
             <ul className="d-flex pl-0 my-2 social_container">
+
+              {/* Facebook */}
               <li className="col-4 d-flex justify-content-center social_item">
                 <a href="./" className="p-2">
                   <img src={`${process.env.PUBLIC_URL}/assets/facebook.png`} alt="Facebook" />
                 </a>
               </li>
+
+              {/* Twitter */}
               <li className="col-4 d-flex justify-content-center social_item">
                 <a href="./" className="p-2">
                   <img src={`${process.env.PUBLIC_URL}/assets/twitter.png`} alt="Twitter" />
                 </a>
               </li>
+
+              {/* Instagram */}
               <li className="col-4 d-flex justify-content-center social_item">
                 <a href="./" className="p-2">
                   <img src={`${process.env.PUBLIC_URL}/assets/instagram.png`} alt="Instagram" />
                 </a>
               </li>
             </ul>
+
             {/* Etsy */}
             <div className="d-flex flex-column align-items-center my-3 etsy_container">
               <p className="mb-1 font-size-10">
-                <em>Prints available from...</em>
+                <em>prints available from...</em>
               </p>
               <a
                 href="https://www.etsy.com/uk/shop/SarahBIllustrates"
@@ -44,6 +52,7 @@ export const Contact = () => {
                 Etsy Store
               </a>
             </div>
+
             {/* Email */}
             <div className="d-flex align-items-center mt-2 mb-3 email_container">
               <img src={`${process.env.PUBLIC_URL}/assets/mail.png`} alt="Email" />
@@ -51,52 +60,50 @@ export const Contact = () => {
                 <p className="mb-0">sarahbrennanillustrates@gmail.com</p>
               </a>
             </div>
+
           </div>
         </div>
+        
         {/* Contact Form */}
         <div className="col-6 d-flex justify-content-center">
           <div className="col-12 mx-0 d-flex flex-column justify-content-center align-items-center h-100 py-5 px-50 contact_box">
+            
             {/* Title */}
             <div className="contact_title">
               <h1 className="ml-auto">Contact Me</h1>
               <p>Get in touch for commissions and general enquiries.</p>
             </div>
+
             {/* Form */}
             <form action="" className="w-100">
+
+              {/* Name */}
               <div className="form-group d-flex flex-column">
                 <label className="mb-1">
-                  Name
+                  name
                 </label>
-                <input
-                  type="text"
-                  className="p-2"
-                  placeholder="Your full name..."
-                  required
-                />
+                <input type="text" className="p-2" placeholder="Your full name..." required />
               </div>
+
+              {/* Email */}
               <div className="form-group d-flex flex-column">
                 <label className="mb-1">
-                  Email
+                  email
                 </label>
-                <input
-                  type="text"
-                  className="p-2"
-                  placeholder="Your email address..."
-                  required
-                />
+                <input type="text" className="p-2" placeholder="Your email address..." required />
               </div>
+
+              {/* Message */}
               <div className="form-group d-flex flex-column">
                 <label className="mb-1">
-                  Message
+                  message
                 </label>
-                <textarea
-                  type="text"
-                  className="p-2"
-                  placeholder="Your message (e.g. what are your commission rates?)..."
-                  required
-                ></textarea>
+                  <textarea type="text"className="p-2"placeholder="Your  message (e.g. what are your commission rates?)..."required></textarea>
               </div>
+              
+              {/* Submit Btn */}
               <PrimaryBtn type="submit" value="send" />
+
             </form>
           </div>
         </div>
@@ -104,31 +111,42 @@ export const Contact = () => {
 
       {/* Mobile */}
       <div className="d-flex flex-column d-md-none w-100 col-12 mobile_contact my-3">
+        
         {/* Title */}
-        <div className="title p-2">
+        <div className="title p-2"> 
           <h1>Contact Me</h1>
-          <p>Follow my pages to get updates on my work and to get in touch</p>
+          <p className="mb-1">Follow my pages to get updates on my work or to get in touch</p>
         </div>
+
         {/* Social Links */}
-        <ul className="social_links d-flex pl-0">
-          <li className="col-4 p-2">
-            <div className="social_item p-2">
-              <img className="w-100" src={`${process.env.PUBLIC_URL}/assets/instagram.png`} alt="Instagram" />
-            </div>
-          </li>
-          <li className="col-4 p-2">
-            <div className="social_item p-2">
+        <ul className="d-flex pl-0 mt-2 mb-3 social_container">
+
+          {/* Facebook */}
+          <li className="col-4 d-flex justify-content-center social_item mobile_social">
+            <a href="./" className="p-2 rounded shadow-sm" style={{height: 'fit-content', width: 'fit-content'}}>
               <img className="w-100" src={`${process.env.PUBLIC_URL}/assets/facebook.png`} alt="Facebook" />
-            </div>
+            </a>
           </li>
-          <li className="col-4 p-2">
-            <div className="social_item p-2">
-              <img className="w-100" src={`${process.env.PUBLIC_URL}/assets/twitter.png`} alt="Twitter" />
-            </div>
+
+          {/* Instagram */}
+          <li className="col-4 d-flex justify-content-center social_item mobile_social">
+            <a href="./" className="p-2 rounded shadow-sm" style={{height: 'fit-content', width: 'fit-content'}}>
+              <img className="w-100" src={`${process.env.PUBLIC_URL}/assets/instagram.png`} alt="instagram" />
+            </a>
+          </li>
+
+          {/* Twitter */}
+          <li className="col-4 d-flex justify-content-center social_item mobile_social">
+            <a href="./" className="p-2 rounded shadow-sm" style={{height: 'fit-content', width: 'fit-content'}}>
+              <img className="w-100" src={`${process.env.PUBLIC_URL}/assets/twitter.png`} alt="twitter" />
+            </a>
           </li>
         </ul>
+
         {/* Etsy & Email */}
-        <div className="col-12 p-2 d-flex etsy_email_container">
+        <div className="p-2 d-flex etsy_email_container">
+
+          {/* Etsy */}
           <div className="col-6 etsy_email_box p-0 pr-2">
             <div className="d-flex py-3 px-2 flex-column justify-content-center align-items-center etsy_email_inner">
               <p className="mb-2">Purchase my prints here</p>
@@ -137,6 +155,8 @@ export const Contact = () => {
               </a>
             </div>
           </div>
+
+          {/* Email */}
           <div className="col-6 etsy_email_box p-0 pl-2">
             <div className="d-flex py-3 px-2 flex-column justify-content-center align-items-center etsy_email_inner">
               <p className="mb-2">Email your requests here</p>
@@ -146,24 +166,25 @@ export const Contact = () => {
             </div>
           </div>
         </div>
+
         {/* Form */}
-        <form className="mobile_form mx-2 mt-3 p-3" action="">
-          <h2 className="py-3">Send a Message</h2>
+        <form className="mobile_form mx-2 mt-3 p-3">
+          <h2 className="py-3">Send a message</h2>
           <div className="my-3 form-group d-flex flex-column">
             <label className="mb-1">
-              Name
+              name
             </label>
             <input className="p-2" type="text" placeholder="Your name..." />
           </div>
           <div className="form-group d-flex flex-column">
             <label className="mb-1">
-              Email
+              email
             </label>
             <input className="p-2" type="text" placeholder="Your email..." />
           </div>
           <div className="form-group d-flex flex-column">
             <label className="mb-1">
-              Name
+              message
             </label>
             <textarea
               className="p-2"
@@ -177,7 +198,9 @@ export const Contact = () => {
             value="Send"
           />
         </form>
+
       </div>
+
     </div>
   );
 };
