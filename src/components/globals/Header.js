@@ -1,4 +1,5 @@
 import React from 'react';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 export const Header = (props) => {
 
@@ -10,40 +11,25 @@ export const Header = (props) => {
       <div className="navbar navbar-light navbar-backdrop">
         <nav className="navbar navbar-expand-lg w-100">
 
-          {/* Brand */}
-          <a href="/" className="navbar-brand col-8 col-md-2">
-            <img src={`${publicPath}/assets/logo-wide.png`} alt="SB Illustrates" />
-          </a>
+          <Navbar id="header" className="w-100 d-flex" expand="lg">
 
-          {/* Toggler (Mobile) */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+            {/* Brand */}
+            <Navbar.Brand href="/">
+              <img src={`${publicPath}/assets/logo-wide.png`} alt="SB Illustrates" />
+            </Navbar.Brand>
 
-          {/* Links */}
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/portfolio">
-                  Portfolio
-                </a>
-              </li>
-            </ul>
-          </div>
-          
+            {/* Toggler */}
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+            {/* Collapsable Content */}
+            <Navbar.Collapse id="basic-navbar-nav" className="d-flex ml-auto" style={{width: 'fit-content'}}>
+              <Nav className="mr-auto">
+                <Nav.Link className="nav-link mauve-color font-weight-bold" href="/">home</Nav.Link>
+                <Nav.Link className="nav-link mauve-color font-weight-bold" href="#link">portfolio</Nav.Link>
+                <Nav.Link className="nav-link mauve-color font-weight-bold" href="/">contact</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
         </nav>
       </div>
     </header>
