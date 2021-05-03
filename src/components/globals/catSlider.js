@@ -8,17 +8,17 @@ export const catSlider = (elOne, elTwo, elThree) => {
     mainParent.classList.remove("col-4");
     closedPOne.classList.remove("col-4");
     closedPTwo.classList.remove("col-4");
-    mainParent.classList.add("col-10");
-    closedPOne.classList.add("col-1");
-    closedPTwo.classList.add("col-1");
+    mainParent.classList.add("col-8");
+    closedPOne.classList.add("col-2");
+    closedPTwo.classList.add("col-2");
     elOne.children[0].style.opacity = "100";
   });
 
   // Leave hover
   mainParent.addEventListener("mouseleave", () => {
-    mainParent.classList.remove("col-10");
-    closedPOne.classList.remove("col-1");
-    closedPTwo.classList.remove("col-1");
+    mainParent.classList.remove("col-8");
+    closedPOne.classList.remove("col-2");
+    closedPTwo.classList.remove("col-2");
     mainParent.classList.add("col-4");
     closedPOne.classList.add("col-4");
     closedPTwo.classList.add("col-4");
