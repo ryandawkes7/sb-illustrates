@@ -1,14 +1,18 @@
 #portfolio-home {
   padding: 1.5rem 0;
-  background: $salmon;
+  background: $turqoise-500;
   height: fit-content;
 
   .portfolio_container {
     flex-direction: column;
     .description_container {
       h1 {
+        color: $orange-500;
         text-transform: uppercase;
         letter-spacing: 0.3rem;
+      }
+      p {
+        color: $orange-300
       }
     }
 
@@ -44,7 +48,7 @@
         background-image: url(/img/uni-image.png);
       }
       #personal {
-        background-image: url(/img/personal-image.png);
+        background-image: url(/img/hs.JPG);
       }
       #commission {
         background-image: url(/img/commission-image.png);

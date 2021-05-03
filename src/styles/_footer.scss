@@ -1,5 +1,5 @@
 #footer {
-  background: $purple;
+  background: $mauve-300;
 
   .navbar {
     display: flex;
@@ -8,7 +8,7 @@
     .navbar-brand {
       margin-bottom: 1.5rem;
       p {
-        color: rgba(0, 0, 0, 0.3);
+        color: $sage-700;
       }
     }
 
@@ -20,7 +20,11 @@
         margin-left: 1.5rem;
       }
       a {
-        color: #fff;
+        color: $sage-700;
+        transition: color .2s ease;
+        &:hover {
+          color: $sage-900;
+        }
       }
     }
   }

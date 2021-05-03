@@ -1,9 +1,18 @@
 #about {
   padding: 1.5rem 0;
-  background: $yellow;
+  background: $orchard-100;
 
   .about_container {
-    flex-direction: column;
+    flex-direction: column-reverse;
+
+    .description_container {
+      h1 {
+        color: $sage-500;
+      }
+      p {
+        color: $sage-300;
+      }
+    }
 
     .profile_image {
       border-radius: 0.5rem;

@@ -2,7 +2,7 @@
 #header {
 
   .navbar-backdrop {
-    background: $pink-gradient;
+    background: $mauve-200;
     nav {
       padding-left: 0 !important;
       padding-right: 0 !important;
@@ -18,6 +18,14 @@
         max-height: 40px;
         width: auto;
         display: block;
+      }
+    }
+
+    .mauve-color {
+      color: $mauve-500;
+      transition: color .2s ease;
+      &:hover {
+        color: $mauve-700;
       }
     }
   }
