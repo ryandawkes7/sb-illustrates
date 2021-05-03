@@ -1,35 +1,91 @@
 [
     {
-        "id": 1,
-        "image": "assets/art/abstract-art.JPG",
-        "title": "Rosa Parks",
+        "id": 19,
+        "image": "assets/art/gf.JPG",
+        "title": "George Floyd",
         "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
         "etsy": null
     },
     {
-        "id": 2,
-        "image": "assets/art/abstract-wilton.JPG",
-        "title": "Wilton Care Home",
+        "id": 11,
+        "image": "assets/art/abst11.PNG",
+        "title": "Abstract 11",
         "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
         "etsy": null
     },
     {
-        "id": 3,
-        "image": "assets/art/baby-sketch.JPG",
-        "title": "Baby Portrait",
+        "id": 18,
+        "image": "assets/art/c.jpg",
+        "title": "Colston Statue",
         "category": "Commission",
         "description": "Lorem ipsum",
-        "style": "Pencil",
+        "style": "Digital",
         "etsy": null
     },
     {
-        "id": 4,
-        "image": "assets/art/back-to-the-future.JPG",
+        "id": 12,
+        "image": "assets/art/abst12.JPG",
+        "title": "Abstract 12",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 6,
+        "image": "assets/art/abst6.PNG",
+        "title": "Abstract 6",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 13,
+        "image": "assets/art/abst2.PNG",
+        "title": "Abstract 2",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    
+    {
+        "id": 15,
+        "image": "assets/art/b.JPG",
+        "title": "Barcelona",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 16,
+        "image": "assets/art/blm.jpg",
+        "title": "Black Lives Matter",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 17,
+        "image": "assets/art/bttf.JPG",
         "title": "Back to the Future",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    
+    {
+        "id": 18,
+        "image": "assets/art/f.jpg",
+        "title": "Food",
         "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
@@ -37,35 +93,35 @@
     },
     {
         "id": 5,
-        "image": "assets/art/family-pencil.JPG",
-        "title": "Family Portrait",
+        "image": "assets/art/abst5.PNG",
+        "title": "Abstract 5",
         "category": "Commission",
-        "description": "Lorem ipsum",
-        "style": "Pencil",
-        "etsy": null
-    },
-    {
-        "id": 6,
-        "image": "assets/art/food-stereotype.JPG",
-        "title": "Food Stereotyping",
-        "category": "University",
-        "description": "Lorem ipsum",
-        "style": "Digital",
-        "etsy": null
-    },
-    {
-        "id": 7,
-        "image": "assets/art/harry-styles.JPG",
-        "title": "Harry Styles Portrait",
-        "category": "Personal",
         "description": "Lorem ipsum",
         "style": "Digital",
         "etsy": null
     },
     {
         "id": 8,
-        "image": "assets/art/taunton-digital.JPG",
-        "title": "Taunton Town Centre",
+        "image": "assets/art/abst8.PNG",
+        "title": "Abstract 8",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 21,
+        "image": "assets/art/hs.JPG",
+        "title": "Harry Styles",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 1,
+        "image": "assets/art/abst1.PNG",
+        "title": "Abstract 1",
         "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
@@ -73,8 +129,26 @@
     },
     {
         "id": 9,
-        "image": "assets/art/travis-scott.JPG",
-        "title": "Travis Scott Portrait",
+        "image": "assets/art/abst9.PNG",
+        "title": "Abstract 9",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 22,
+        "image": "assets/art/malala.JPG",
+        "title": "Malala",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 23,
+        "image": "assets/art/pc.JPG",
+        "title": "Portrait Commission",
         "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
@@ -82,18 +156,117 @@
     },
     {
         "id": 10,
-        "image": "assets/art/tyler-blue.JPG",
-        "title": "Tyler the Creator - Blue",
-        "category": "Personal",
+        "image": "assets/art/abst10.PNG",
+        "title": "Abstract 10",
+        "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
         "etsy": null
     },
     {
-        "id": 11,
-        "image": "assets/art/tyler-brown.JPG",
-        "title": "Tyler the Creator - Brown",
-        "category": "University",
+        "id": 24,
+        "image": "assets/art/rp.JPG",
+        "title": "Rosa Parks",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 25,
+        "image": "assets/art/sa.jpg",
+        "title": "Social Media Addiction",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 4,
+        "image": "assets/art/abst4.PNG",
+        "title": "Abstract 4",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 26,
+        "image": "assets/art/sir.PNG",
+        "title": "Still I Rise",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 7,
+        "image": "assets/art/abst7.PNG",
+        "title": "Abstract 7",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 27,
+        "image": "assets/art/t.JPG",
+        "title": "Taunton",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 20,
+        "image": "assets/art/golf.JPG",
+        "title": "Golf",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 3,
+        "image": "assets/art/abst3.PNG",
+        "title": "Abstract 3",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 28,
+        "image": "assets/art/ts.JPG",
+        "title": "Travis Scott",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 29,
+        "image": "assets/art/ttc.JPG",
+        "title": "Tyler the Creator",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 30,
+        "image": "assets/art/v.JPG",
+        "title": "Venice",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 14,
+        "image": "assets/art/abst13.JPG",
+        "title": "Abstract 13",
+        "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
         "etsy": null
