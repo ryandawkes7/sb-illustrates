@@ -1,10 +1,10 @@
-import React from "react";
-import { catSlider } from "../globals/catSlider";
+import React from 'react';
+import { catSlider } from '../globals/catSlider';
 
 export const Portfolio = () => {
-  const uni = document.getElementById("university");
-  const per = document.getElementById("personal");
-  const com = document.getElementById("commission");
+  const uni = document.getElementById('university');
+  const per = document.getElementById('personal');
+  const com = document.getElementById('commission');
 
   if (uni && per && com) {
     catSlider(uni, per, com);
@@ -30,7 +30,6 @@ export const Portfolio = () => {
 
         {/* Gallery (Desktop) */}
         <div className="col-8 col-md-6 ml-auto d-none d-md-flex px-0 image_container rounded-lg shadow overflow-hidden">
-
           {/* Personal */}
           <div className="col-4 p-0 image_slider">
             <div className="image_box position-relative" id="personal">
@@ -51,16 +50,17 @@ export const Portfolio = () => {
               <div className="position-absolute">Commissions</div>
             </div>
           </div>
-
         </div>
 
         {/* Gallery (Mobile) */}
         <div className="col-12">
           <div className="w-100 d-flex d-md-none flex-column image_container px-0 rounded-lg shadow w-100">
-
             {/* Uni */}
             <div className="w-100 h-33">
-              <div className="image_box position-relative h-100" id="university">
+              <div
+                className="image_box position-relative h-100"
+                id="university"
+              >
                 <div className="position-absolute">University</div>
               </div>
             </div>

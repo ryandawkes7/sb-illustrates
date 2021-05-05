@@ -8,20 +8,18 @@ export const Home = (props) => {
   const fh = props.fh;
   const wh = window.innerHeight;
 
-  const myArr = [...document.getElementsByName("section")];
-  myArr.forEach(e => {
-    if (e.id === "portfolio-home") e.style.minHeight = `${wh - hh}px`;
-    if (e.id === "about") e.style.minHeight = `${wh}px`;
-    if (e.id === "contact") e.style.minHeight = `${wh - fh}`;
+  const myArr = [...document.getElementsByName('section')];
+  myArr.forEach((e) => {
+    if (e.id === 'portfolio-home') e.style.minHeight = `${wh - hh}px`;
+    if (e.id === 'about') e.style.minHeight = `${wh}px`;
+    if (e.id === 'contact') e.style.minHeight = `${wh - fh}`;
   });
 
   return (
     <div id="home-container">
-
       <Portfolio />
       <About />
       <Contact />
-
     </div>
-  )
-}
+  );
+};

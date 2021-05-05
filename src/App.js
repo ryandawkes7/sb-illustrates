@@ -1,13 +1,12 @@
-import "./styles/main.scss";
-import { Header } from "./components/globals/Header";
-import { Footer } from "./components/globals/Footer";
-import React, {useEffect, useRef, useState} from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Home } from "./pages/Home";
-import { Portfolio } from "./pages/Portfolio";
+import './styles/main.scss';
+import { Header } from './components/globals/Header';
+import { Footer } from './components/globals/Footer';
+import React, { useEffect, useRef, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { Portfolio } from './pages/Portfolio';
 
-function App() {
-
+function App () {
   const headerRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -17,7 +16,7 @@ function App() {
   useEffect(() => {
     // Header height
     if (headerRef.current) {
-     let hh = headerRef.current.offsetHeight;
+      let hh = headerRef.current.offsetHeight;
       setHeaderH(hh);
     }
 
@@ -26,24 +25,24 @@ function App() {
       let fh = footerRef.current.offsetHeight;
       setFooterH(fh);
     }
-  }, [headerRef, footerRef])
+  }, [headerRef, footerRef]);
 
   return (
     <Router>
-        <Header headerRef={headerRef} />
+      <Header headerRef={headerRef} />
 
-        <main>
-          <Switch>
-            <Route exact path="/">
-              <Home hh={headerH} fh={footerH}/>
-            </Route>
-            <Route exact path="/portfolio">
-              <Portfolio hh={headerH} fh={footerH}/>
-            </Route>
-          </Switch>
-        </main>
+      <main>
+        <Switch>
+          <Route exact path="/">
+            <Home hh={headerH} fh={footerH} />
+          </Route>
+          <Route exact path="/portfolio">
+            <Portfolio hh={headerH} fh={footerH} />
+          </Route>
+        </Switch>
+      </main>
 
-        <Footer footerRef={footerRef} />
+      <Footer footerRef={footerRef} />
     </Router>
   );
 }

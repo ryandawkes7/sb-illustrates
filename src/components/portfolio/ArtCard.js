@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 /* USAGE:
@@ -15,16 +15,16 @@ export const ArtCard = (props) => {
   const showModal = (el) => {
     setSelected(el);
     setShow(true);
-  }
+  };
 
   const hideModal = () => {
-    setSelected(null)
+    setSelected(null);
     setShow(false);
-  }
+  };
 
   useEffect(() => {
     if (selected != null) {
-      console.log(`new state: ${selected.id}`)
+      console.log(`new state: ${selected.id}`);
     }
   }, [selected]);
 
@@ -42,7 +42,12 @@ export const ArtCard = (props) => {
       >
         {/* Image */}
         <div className="image_container d-flex justify-content-center align-items-center col-11 m-auto">
-          <img className="art_image" src={image} alt={item.title} style={{pointerEvents: 'none'}} />
+          <img
+            className="art_image"
+            src={image}
+            alt={item.title}
+            style={{ pointerEvents: 'none' }}
+          />
         </div>
 
         <footer className="d-flex flex-column justify-content-center w-100">
@@ -71,7 +76,6 @@ export const ArtCard = (props) => {
 
       {/* Art Modal */}
       <Modal show={show} onHide={hideModal} size="xl" centered keyboard={false}>
-
         {/* Header */}
         <Modal.Header closeButton>
           <Modal.Title>{item.title}</Modal.Title>
@@ -79,17 +83,18 @@ export const ArtCard = (props) => {
 
         {/* Body */}
         <Modal.Body>
-
           {/* Image */}
           <div className="col-12 col-md-6">
-            <img className="w-100" src={image} alt={item.title} style={{pointerEvents: 'none'}} />
+            <img
+              className="w-100"
+              src={image}
+              alt={item.title}
+              style={{ pointerEvents: 'none' }}
+            />
           </div>
 
           {/* Description */}
-          <div className="col-6">
-            
-          </div>
-
+          <div className="col-6" />
         </Modal.Body>
 
         {/* Footer */}
@@ -99,7 +104,6 @@ export const ArtCard = (props) => {
           </Button>
           <Button variant="primary">Understood</Button>
         </Modal.Footer>
-
       </Modal>
     </div>
   );
