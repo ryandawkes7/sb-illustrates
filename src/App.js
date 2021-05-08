@@ -1,12 +1,13 @@
-import './styles/main.scss';
-import { Header } from './components/globals/Header';
-import { Footer } from './components/globals/Footer';
-import React, { useEffect, useRef, useState } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home } from './pages/Home';
-import { Portfolio } from './pages/Portfolio';
+import "./styles/main.scss";
+import { Header } from "./components/globals/Header";
+import { Footer } from "./components/globals/Footer";
+import React, { useEffect, useRef, useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Portfolio } from "./pages/Portfolio";
+import { ContactPage } from "./pages/ContactPage";
 
-function App () {
+function App() {
   const headerRef = useRef(null);
   const footerRef = useRef(null);
 
@@ -38,6 +39,9 @@ function App () {
           </Route>
           <Route exact path="/portfolio">
             <Portfolio hh={headerH} fh={footerH} />
+          </Route>
+          <Route exact path="/contact">
+            <ContactPage hh={headerH} fh={footerH} />
           </Route>
         </Switch>
       </main>
