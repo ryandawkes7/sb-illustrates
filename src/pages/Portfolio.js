@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import data from '../data.json';
+import React, { useEffect, useState } from "react";
+import data from "../data.json";
 
 export const Portfolio = () => {
   const [artData, setArtData] = useState([]);
@@ -31,13 +31,14 @@ export const Portfolio = () => {
             return (
               <button
                 key={item.id}
-                className="w-100 border-0 bg-transparent p-0 my-3 shadow rounded-lg overflow-hidden"
+                className="w-100 border-0 bg-transparent my-3 art_item"
                 onClick={() => showModal(item)}
               >
                 <img
                   src={`${process.env.PUBLIC_URL}${item.image}`}
-                  className="w-100"
-                  style={{ pointerEvents: 'none' }}
+                  className="w-100 rounded-lg"
+                  style={{ pointerEvents: "none" }}
+                  alt={item.title}
                 />
               </button>
             );
@@ -48,13 +49,14 @@ export const Portfolio = () => {
             return (
               <button
                 key={item.id}
-                className="w-100 border-0 bg-transparent p-0 my-3 shadow rounded-lg overflow-hidden"
+                className="w-100 border-0 bg-transparent my-3 art_item"
                 onClick={() => showModal(item)}
               >
                 <img
                   src={`${process.env.PUBLIC_URL}${item.image}`}
-                  className="w-100"
-                  style={{ pointerEvents: 'none' }}
+                  className="w-100 rounded-lg"
+                  style={{ pointerEvents: "none" }}
+                  alt="hello"
                 />
               </button>
             );
@@ -65,13 +67,14 @@ export const Portfolio = () => {
             return (
               <button
                 key={item.id}
-                className="w-100 border-0 bg-transparent p-0 my-3 shadow rounded-lg overflow-hidden"
+                className="w-100 border-0 bg-transparent my-3 art_item"
                 onClick={() => showModal(item)}
               >
                 <img
                   src={`${process.env.PUBLIC_URL}${item.image}`}
-                  className="w-100"
-                  style={{ pointerEvents: 'none' }}
+                  className="w-100 rounded-lg"
+                  style={{ pointerEvents: "none" }}
+                  alt="hello"
                 />
               </button>
             );
@@ -82,13 +85,14 @@ export const Portfolio = () => {
             return (
               <button
                 key={item.id}
-                className="w-100 border-0 bg-transparent p-0 my-3 shadow rounded-lg overflow-hidden"
+                className="w-100 border-0 bg-transparent my-3 art_item"
                 onClick={() => showModal(item)}
               >
                 <img
                   src={`${process.env.PUBLIC_URL}${item.image}`}
-                  className="w-100"
-                  style={{ pointerEvents: 'none' }}
+                  className="w-100 rounded-lg"
+                  style={{ pointerEvents: "none" }}
+                  alt="hello"
                 />
               </button>
             );
