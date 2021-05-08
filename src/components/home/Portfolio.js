@@ -1,10 +1,10 @@
-import React from 'react';
-import { catSlider } from '../globals/catSlider';
+import React from "react";
+import { catSlider } from "../globals/catSlider";
 
 export const Portfolio = () => {
-  const uni = document.getElementById('university');
-  const per = document.getElementById('personal');
-  const com = document.getElementById('commission');
+  const uni = document.getElementById("university");
+  const per = document.getElementById("personal");
+  const com = document.getElementById("commission");
 
   if (uni && per && com) {
     catSlider(uni, per, com);
@@ -23,8 +23,8 @@ export const Portfolio = () => {
         <div className="col-12 col-md-6 pr-100 d-flex justify-content-center flex-column description_container">
           <h1 className="p-2">Portfolio</h1>
           <p className="p-2">
-            Over the years, I have completed various forms of work. Select a
-            category on the right to see some of them.
+            Over the years, I have completed various forms of work. I have
+            broken down my pieces into three categories, as seen to the right:
           </p>
         </div>
 
