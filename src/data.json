@@ -1,8 +1,8 @@
 [
     {
-        "id": 19,
-        "image": "assets/art/gf.JPG",
-        "title": "George Floyd",
+        "id": 23,
+        "image": "assets/art/pc.JPG",
+        "title": "Portrait Commission",
         "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
@@ -146,15 +146,6 @@
         "etsy": null
     },
     {
-        "id": 23,
-        "image": "assets/art/pc.JPG",
-        "title": "Portrait Commission",
-        "category": "Commission",
-        "description": "Lorem ipsum",
-        "style": "Digital",
-        "etsy": null
-    },
-    {
         "id": 10,
         "image": "assets/art/abst10.PNG",
         "title": "Abstract 10",
@@ -176,6 +167,15 @@
         "id": 25,
         "image": "assets/art/sa.jpg",
         "title": "Social Media Addiction",
+        "category": "Commission",
+        "description": "Lorem ipsum",
+        "style": "Digital",
+        "etsy": null
+    },
+    {
+        "id": 19,
+        "image": "assets/art/gf.JPG",
+        "title": "George Floyd",
         "category": "Commission",
         "description": "Lorem ipsum",
         "style": "Digital",
