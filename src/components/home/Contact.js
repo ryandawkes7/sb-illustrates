@@ -1,5 +1,5 @@
-import React from 'react';
-import { PrimaryBtn } from '../globals/PrimaryBtn';
+import React from "react";
+import { PrimaryBtn } from "../globals/PrimaryBtn";
 
 export const Contact = () => {
   return (
@@ -18,9 +18,29 @@ export const Contact = () => {
 
             {/* Social Links */}
             <ul className="d-flex pl-0 my-2 social_container">
+              {/* Instagram */}
+              <li className="col-4 d-flex justify-content-center social_item">
+                <a
+                  href="https://www.instagram.com/sb_illustrates/"
+                  className="p-2"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/instagram.png`}
+                    alt="Instagram"
+                  />
+                </a>
+              </li>
+
               {/* Facebook */}
               <li className="col-4 d-flex justify-content-center social_item">
-                <a href="./" className="p-2">
+                <a
+                  href="https://www.facebook.com/sbillustrates/"
+                  className="p-2"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/facebook.png`}
                     alt="Facebook"
@@ -28,22 +48,17 @@ export const Contact = () => {
                 </a>
               </li>
 
-              {/* Twitter */}
+              {/* LinkedIn */}
               <li className="col-4 d-flex justify-content-center social_item">
-                <a href="./" className="p-2">
+                <a
+                  href="https://www.linkedin.com/in/sarah-brennan-04ba26207/?originalSubdomain=uk"
+                  className="p-2"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <img
-                    src={`${process.env.PUBLIC_URL}/assets/twitter.png`}
-                    alt="Twitter"
-                  />
-                </a>
-              </li>
-
-              {/* Instagram */}
-              <li className="col-4 d-flex justify-content-center social_item">
-                <a href="./" className="p-2">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/instagram.png`}
-                    alt="Instagram"
+                    src={`${process.env.PUBLIC_URL}/assets/linkedin.png`}
+                    alt="LinkedIn"
                   />
                 </a>
               </li>
@@ -57,6 +72,8 @@ export const Contact = () => {
               <a
                 href="https://www.etsy.com/uk/shop/SarahBIllustrates"
                 className="etsy_link px-3 py-2"
+                rel="noreferrer"
+                target="_blank"
               >
                 Etsy Store
               </a>
@@ -68,8 +85,13 @@ export const Contact = () => {
                 src={`${process.env.PUBLIC_URL}/assets/mail.png`}
                 alt="Email"
               />
-              <a href="./" className="ml-2">
-                <p className="mb-0">sarahbrennanillustrates@gmail.com</p>
+              <a
+                href="mailto:sarahbrennanillustrates@gmail.com"
+                className="ml-2"
+              >
+                <p className="mb-0 email_link">
+                  sarahbrennanillustrates@gmail.com
+                </p>
               </a>
             </div>
           </div>
@@ -141,9 +163,9 @@ export const Contact = () => {
           {/* Facebook */}
           <li className="col-4 d-flex justify-content-center social_item mobile_social">
             <a
-              href="./"
+              href="https://www.facebook.com/sbillustrates/"
               className="p-2 rounded shadow-sm"
-              style={{ height: 'fit-content', width: 'fit-content' }}
+              style={{ height: "fit-content", width: "fit-content" }}
             >
               <img
                 className="w-100"
@@ -156,9 +178,11 @@ export const Contact = () => {
           {/* Instagram */}
           <li className="col-4 d-flex justify-content-center social_item mobile_social">
             <a
-              href="./"
+              href="https://www.instagram.com/sb_illustrates/"
               className="p-2 rounded shadow-sm"
-              style={{ height: 'fit-content', width: 'fit-content' }}
+              style={{ height: "fit-content", width: "fit-content" }}
+              target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-100"
@@ -168,17 +192,19 @@ export const Contact = () => {
             </a>
           </li>
 
-          {/* Twitter */}
+          {/* LinkedIn */}
           <li className="col-4 d-flex justify-content-center social_item mobile_social">
             <a
-              href="./"
+              href="https://www.linkedin.com/in/sarah-brennan-04ba26207/?originalSubdomain=uk"
               className="p-2 rounded shadow-sm"
-              style={{ height: 'fit-content', width: 'fit-content' }}
+              style={{ height: "fit-content", width: "fit-content" }}
+              target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-100"
-                src={`${process.env.PUBLIC_URL}/assets/twitter.png`}
-                alt="twitter"
+                src={`${process.env.PUBLIC_URL}/assets/linkedin.png`}
+                alt="LinkedIn"
               />
             </a>
           </li>
@@ -191,8 +217,10 @@ export const Contact = () => {
             <div className="d-flex py-3 px-2 flex-column justify-content-center align-items-center etsy_email_inner">
               <p className="mb-2">Purchase my prints here</p>
               <a
-                href="./"
+                href="https://www.etsy.com/uk/shop/SarahBIllustrates"
                 className="d-flex px-4 justify-content-center align-items-center etsy_button"
+                target="_blank"
+                rel="noreferrer"
               >
                 ETSY
               </a>
@@ -203,7 +231,7 @@ export const Contact = () => {
           <div className="col-6 etsy_email_box p-0 pl-2">
             <div className="d-flex py-3 px-2 flex-column justify-content-center align-items-center etsy_email_inner">
               <p className="mb-2">Email your requests here</p>
-              <a href="./">
+              <a href="mailto:sarahbrennanillustrates@gmail.com">
                 <img
                   className="h-100"
                   src={`${process.env.PUBLIC_URL}/assets/mail.png`}
