@@ -1,3 +1,17 @@
+.art_item {
+  transition: all .3s ease;
+  padding: 0.25rem !important;
+  img {
+    transition: all .3s ease;
+  }
+  &:hover { 
+    padding: 0rem !important;
+    img {
+      box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.4) !important;
+    }
+  }
+}
+
 #portfolio-container {
   background: $mauve-100;
   min-height: 100vh;
