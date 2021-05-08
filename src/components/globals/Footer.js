@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export const Footer = (props) => {
   const footerRef = props.footerRef;
@@ -32,6 +32,11 @@ export const Footer = (props) => {
           <li className="my-3 mx-4">
             <a className="font-weight-bold" href="/portfolio">
               portfolio
+            </a>
+          </li>
+          <li className="my-3 mx-4">
+            <a className="font-weight-bold" href="/contact">
+              contact
             </a>
           </li>
         </ul>
