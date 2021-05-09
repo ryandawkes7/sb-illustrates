@@ -1,7 +1,14 @@
 import React from "react";
 import { PrimaryBtn } from "../globals/PrimaryBtn";
+import { useForm } from "react-hook-form";
 
 export const Contact = () => {
+  const { register, errors, handleSubmit, reset } = useForm();
+
+  const onSubmit = () => {
+    console.timeLog("");
+  };
+
   return (
     <div id="contact" className="section_container w-100 d-flex" name="section">
       {/* Desktop */}
