@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import emailjs, { init } from "emailjs-com";
 import { PrimaryBtn } from "../globals/PrimaryBtn";
@@ -8,6 +8,28 @@ import "react-toastify/dist/ReactToastify.min.css";
 init("user_pZK2ZSiYuabJQdc9HljH0");
 
 export const Contact = () => {
+  const [desktopForm, setDesktopForm] = useState(false);
+  const [ww, setWW] = useState(0);
+
+  const winW = window.innerWidth;
+
+  useEffect(() => {
+    setWW(winW);
+
+    if (winW)
+      window.addEventListener("resize", () => {
+        setWW(window.innerWidth);
+      });
+
+    if (winW !== ww) setWW(winW);
+
+    if (ww < 768) {
+      setDesktopForm(false);
+    } else {
+      setDesktopForm(true);
+    }
+  }, [desktopForm, winW, ww]);
+
   const {
     register,
     formState: { errors },
@@ -37,7 +59,23 @@ export const Contact = () => {
     );
   };
 
-  const onSubmit = async (data) => {
+  const onSubmitFormOne = async (data) => {
+    try {
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      };
+      await emailjs.send("service_ybc3waj", "template_ze1ywjf", templateParams);
+      reset(this);
+      successToast(data.name);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  const onSubmitFormTwo = async (data) => {
     try {
       const templateParams = {
         name: data.name,
@@ -158,118 +196,120 @@ export const Contact = () => {
             </div>
 
             {/* Form */}
-            <form
-              className="w-100"
-              onSubmit={handleSubmit(onSubmit)}
-              noValidate
-            >
-              {/* Name */}
-              <div className="form-group d-flex flex-column">
-                {/* Heading */}
-                <label className="mb-1">name</label>
+            {desktopForm && (
+              <form
+                className="w-100"
+                onSubmit={handleSubmit(onSubmitFormOne)}
+                noValidate
+              >
+                {/* Name */}
+                <div className="form-group d-flex flex-column">
+                  {/* Heading */}
+                  <label className="mb-1">name</label>
 
-                {/* Error Handling */}
-                {errors.name ? (
-                  <small className="errorMessage text-danger pb-2">
-                    {errors.name.message}
-                  </small>
-                ) : null}
+                  {/* Error Handling */}
+                  {errors.name ? (
+                    <small className="errorMessage text-danger pb-2">
+                      {errors.name.message}
+                    </small>
+                  ) : null}
 
-                <input
-                  type="text"
-                  name="name"
-                  {...register("name", {
-                    required: {
-                      value: true,
-                      message: "Please enter your name",
-                    },
-                    maxLength: {
-                      value: 30,
-                      message: "Please use 30 characters or less",
-                    },
-                  })}
-                  className="p-2"
-                  placeholder="Your full name..."
-                ></input>
-              </div>
+                  <input
+                    type="text"
+                    name="name"
+                    {...register("name", {
+                      required: {
+                        value: true,
+                        message: "Please enter your name",
+                      },
+                      maxLength: {
+                        value: 30,
+                        message: "Please use 30 characters or less",
+                      },
+                    })}
+                    className="p-2"
+                    placeholder="Your full name..."
+                  ></input>
+                </div>
 
-              {/* Email */}
-              <div className="form-group d-flex flex-column">
-                {/* Heading */}
-                <label className="mb-1">email</label>
+                {/* Email */}
+                <div className="form-group d-flex flex-column">
+                  {/* Heading */}
+                  <label className="mb-1">email</label>
 
-                {/* Error Handling */}
-                {errors.email ? (
-                  <small className="errorMessage text-danger pb-2">
-                    Please enter a valid email address
-                  </small>
-                ) : null}
+                  {/* Error Handling */}
+                  {errors.email ? (
+                    <small className="errorMessage text-danger pb-2">
+                      Please enter a valid email address
+                    </small>
+                  ) : null}
 
-                <input
-                  type="text"
-                  className="p-2"
-                  name="email"
-                  placeholder="Your email address..."
-                  required
-                  {...register("email", {
-                    required: true,
-                    pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                  })}
-                />
-              </div>
+                  <input
+                    type="text"
+                    className="p-2"
+                    name="email"
+                    placeholder="Your email address..."
+                    required
+                    {...register("email", {
+                      required: true,
+                      pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    })}
+                  />
+                </div>
 
-              {/* Subject */}
-              <div className="form-group d-flex flex-column">
-                {/* Heading */}
-                <label className="mb-1">subject</label>
+                {/* Subject */}
+                <div className="form-group d-flex flex-column">
+                  {/* Heading */}
+                  <label className="mb-1">subject</label>
 
-                {/* Error Handling */}
-                {errors.subject ? (
-                  <small className="errorMessage text-danger pb-2">
-                    Please enter a subject line
-                  </small>
-                ) : null}
+                  {/* Error Handling */}
+                  {errors.subject ? (
+                    <small className="errorMessage text-danger pb-2">
+                      Please enter a subject line
+                    </small>
+                  ) : null}
 
-                <input
-                  type="text"
-                  className="p-2"
-                  name="subject"
-                  {...register("subject", {
-                    required: true,
-                  })}
-                  placeholder="Your message subject..."
-                  required
-                />
-              </div>
+                  <input
+                    type="text"
+                    className="p-2"
+                    name="subject"
+                    {...register("subject", {
+                      required: true,
+                    })}
+                    placeholder="Your message subject..."
+                    required
+                  />
+                </div>
 
-              {/* Message */}
-              <div className="form-group d-flex flex-column">
-                {/* Heading */}
-                <label className="mb-1">message</label>
+                {/* Message */}
+                <div className="form-group d-flex flex-column">
+                  {/* Heading */}
+                  <label className="mb-1">message</label>
 
-                {/* Error Handling */}
-                {errors.message ? (
-                  <small className="errorMessage text-danger pb-2">
-                    Please enter a message
-                  </small>
-                ) : null}
+                  {/* Error Handling */}
+                  {errors.message ? (
+                    <small className="errorMessage text-danger pb-2">
+                      Please enter a message
+                    </small>
+                  ) : null}
 
-                {/* Input */}
-                <textarea
-                  type="text"
-                  className="p-2"
-                  name="message"
-                  {...register("message", {
-                    required: true,
-                  })}
-                  placeholder="Your  message (e.g. what are your commission rates?)..."
-                  required
-                />
-              </div>
+                  {/* Input */}
+                  <textarea
+                    type="text"
+                    className="p-2"
+                    name="message"
+                    {...register("message", {
+                      required: true,
+                    })}
+                    placeholder="Your  message (e.g. what are your commission rates?)..."
+                    required
+                  />
+                </div>
 
-              {/* Submit Btn */}
-              <PrimaryBtn type="submit" value="send" />
-            </form>
+                {/* Submit Btn */}
+                <PrimaryBtn type="submit" value="send" />
+              </form>
+            )}
           </div>
         </div>
         <ToastContainer />
@@ -370,120 +410,122 @@ export const Contact = () => {
         </div>
 
         {/* Form */}
-        <form
-          className="mobile_form mx-2 mt-3 p-3"
-          onSubmit={handleSubmit(onSubmit)}
-          noValidate
-        >
-          <h2 className="py-3">Send a message</h2>
+        {!desktopForm && (
+          <form
+            className="mobile_form mx-2 mt-3 p-3"
+            onSubmit={handleSubmit(onSubmitFormTwo)}
+            noValidate
+          >
+            <h2 className="py-3">Send a message</h2>
 
-          {/* Name */}
-          <div className="my-3 form-group d-flex flex-column">
-            {/* Heading */}
-            <label className="mb-1">name</label>
+            {/* Name */}
+            <div className="my-3 form-group d-flex flex-column">
+              {/* Heading */}
+              <label className="mb-1">name</label>
 
-            {/* Error Handling */}
-            {errors.name ? (
-              <small className="errorMessage text-danger pb-2">
-                {errors.name.message}
-              </small>
-            ) : null}
+              {/* Error Handling */}
+              {errors.name ? (
+                <small className="errorMessage text-danger pb-2">
+                  {errors.name.message}
+                </small>
+              ) : null}
 
-            {/* Input */}
-            <input
-              className="p-2"
-              type="text"
-              placeholder="Your name..."
-              {...register("name", {
-                required: {
-                  value: true,
-                  message: "Please enter your name",
-                },
-                maxLength: {
-                  value: 30,
-                  message: "Please use 30 characters or less",
-                },
-              })}
-            />
-          </div>
+              {/* Input */}
+              <input
+                className="p-2"
+                type="text"
+                placeholder="Your name..."
+                {...register("name", {
+                  required: {
+                    value: true,
+                    message: "Please enter your name",
+                  },
+                  maxLength: {
+                    value: 30,
+                    message: "Please use 30 characters or less",
+                  },
+                })}
+              />
+            </div>
 
-          {/* Email */}
-          <div className="form-group d-flex flex-column">
-            {/* Heading */}
-            <label className="mb-1">email</label>
+            {/* Email */}
+            <div className="form-group d-flex flex-column">
+              {/* Heading */}
+              <label className="mb-1">email</label>
 
-            {/* Error Handling */}
-            {errors.email ? (
-              <small className="errorMessage text-danger pb-2">
-                Please enter a valid email address
-              </small>
-            ) : null}
+              {/* Error Handling */}
+              {errors.email ? (
+                <small className="errorMessage text-danger pb-2">
+                  Please enter a valid email address
+                </small>
+              ) : null}
 
-            {/* Input */}
-            <input
-              className="p-2"
-              type="text"
-              placeholder="Your email..."
-              required
-              {...register("email", {
-                required: true,
-                pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              })}
-            />
-          </div>
+              {/* Input */}
+              <input
+                className="p-2"
+                type="text"
+                placeholder="Your email..."
+                required
+                {...register("email", {
+                  required: true,
+                  pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                })}
+              />
+            </div>
 
-          {/* Subject */}
-          <div className="form-group d-flex flex-column">
-            {/* Heading */}
-            <label className="mb-1">subject</label>
+            {/* Subject */}
+            <div className="form-group d-flex flex-column">
+              {/* Heading */}
+              <label className="mb-1">subject</label>
 
-            {/* Error Handling */}
-            {errors.subject ? (
-              <small className="errorMessage text-danger pb-2">
-                Please enter a subject line
-              </small>
-            ) : null}
+              {/* Error Handling */}
+              {errors.subject ? (
+                <small className="errorMessage text-danger pb-2">
+                  Please enter a subject line
+                </small>
+              ) : null}
 
-            <input
-              type="text"
-              className="p-2"
-              name="subject"
-              {...register("subject", {
-                required: true,
-              })}
-              placeholder="Your message subject..."
-              required
-            />
-          </div>
+              <input
+                type="text"
+                className="p-2"
+                name="subject"
+                {...register("subject", {
+                  required: true,
+                })}
+                placeholder="Your message subject..."
+                required
+              />
+            </div>
 
-          {/* Message */}
-          <div className="form-group d-flex flex-column">
-            {/* Heading */}
-            <label className="mb-1">message</label>
+            {/* Message */}
+            <div className="form-group d-flex flex-column">
+              {/* Heading */}
+              <label className="mb-1">message</label>
 
-            {/* Error Handling */}
-            {errors.message ? (
-              <small className="errorMessage text-danger pb-2">
-                Please enter a message
-              </small>
-            ) : null}
+              {/* Error Handling */}
+              {errors.message ? (
+                <small className="errorMessage text-danger pb-2">
+                  Please enter a message
+                </small>
+              ) : null}
 
-            {/* Input */}
-            <textarea
-              type="text"
-              className="p-2"
-              name="message"
-              {...register("message", {
-                required: true,
-              })}
-              placeholder="Your  message (e.g. what are your commission rates?)..."
-              required
-            />
-          </div>
+              {/* Input */}
+              <textarea
+                type="text"
+                className="p-2"
+                name="message"
+                {...register("message", {
+                  required: true,
+                })}
+                placeholder="Your  message (e.g. what are your commission rates?)..."
+                required
+              />
+            </div>
 
-          {/* Submit Btn */}
-          <PrimaryBtn type="submit" value="send" />
-        </form>
+            {/* Submit Btn */}
+            <PrimaryBtn type="submit" value="send" />
+          </form>
+        )}
       </div>
       <ToastContainer />
     </div>
