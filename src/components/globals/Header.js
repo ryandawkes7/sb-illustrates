@@ -1,16 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 
 export const Header = (props) => {
-  const [expand, setExpand] = useState(false);
-
-  const navExpand = () => {
-    setExpand(true);
-  };
-  const navClose = () => {
-    setExpand(false);
-  };
-
   const headerRef = props.headerRef;
   const publicPath = process.env.PUBLIC_URL;
 
