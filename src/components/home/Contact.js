@@ -1,7 +1,58 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import emailjs, { init } from "emailjs-com";
 import { PrimaryBtn } from "../globals/PrimaryBtn";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
+
+init("user_pZK2ZSiYuabJQdc9HljH0");
 
 export const Contact = () => {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
+
+  const successToast = (name) => {
+    const capitalise = (str) => {
+      const lower = str.toLowerCase();
+      return str.charAt(0).toUpperCase() + lower.slice(1);
+    };
+    toast(
+      `Message sent successfully. ${capitalise(
+        name
+      )}, keep an eye on your inbox!`,
+      {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        className: "submit-feedback success",
+        toastId: "notifyToast",
+      }
+    );
+  };
+
+  const onSubmit = async (data) => {
+    try {
+      const templateParams = {
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
+        message: data.message,
+      };
+      await emailjs.send("service_ybc3waj", "template_ze1ywjf", templateParams);
+      reset();
+      successToast(data.name);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
   return (
     <div id="contact" className="section_container w-100 d-flex" name="section">
       {/* Desktop */}
@@ -107,35 +158,110 @@ export const Contact = () => {
             </div>
 
             {/* Form */}
-            <form action="" className="w-100">
+            <form
+              className="w-100"
+              onSubmit={handleSubmit(onSubmit)}
+              noValidate
+            >
               {/* Name */}
               <div className="form-group d-flex flex-column">
+                {/* Heading */}
                 <label className="mb-1">name</label>
+
+                {/* Error Handling */}
+                {errors.name ? (
+                  <small className="errorMessage text-danger pb-2">
+                    {errors.name.message}
+                  </small>
+                ) : null}
+
                 <input
                   type="text"
+                  name="name"
+                  {...register("name", {
+                    required: {
+                      value: true,
+                      message: "Please enter your name",
+                    },
+                    maxLength: {
+                      value: 30,
+                      message: "Please use 30 characters or less",
+                    },
+                  })}
                   className="p-2"
                   placeholder="Your full name..."
-                  required
-                />
+                ></input>
               </div>
 
               {/* Email */}
               <div className="form-group d-flex flex-column">
+                {/* Heading */}
                 <label className="mb-1">email</label>
+
+                {/* Error Handling */}
+                {errors.email ? (
+                  <small className="errorMessage text-danger pb-2">
+                    Please enter a valid email address
+                  </small>
+                ) : null}
+
                 <input
                   type="text"
                   className="p-2"
+                  name="email"
                   placeholder="Your email address..."
+                  required
+                  {...register("email", {
+                    required: true,
+                    pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                  })}
+                />
+              </div>
+
+              {/* Subject */}
+              <div className="form-group d-flex flex-column">
+                {/* Heading */}
+                <label className="mb-1">subject</label>
+
+                {/* Error Handling */}
+                {errors.subject ? (
+                  <small className="errorMessage text-danger pb-2">
+                    Please enter a subject line
+                  </small>
+                ) : null}
+
+                <input
+                  type="text"
+                  className="p-2"
+                  name="subject"
+                  {...register("subject", {
+                    required: true,
+                  })}
+                  placeholder="Your message subject..."
                   required
                 />
               </div>
 
               {/* Message */}
               <div className="form-group d-flex flex-column">
+                {/* Heading */}
                 <label className="mb-1">message</label>
+
+                {/* Error Handling */}
+                {errors.message ? (
+                  <small className="errorMessage text-danger pb-2">
+                    Please enter a message
+                  </small>
+                ) : null}
+
+                {/* Input */}
                 <textarea
                   type="text"
                   className="p-2"
+                  name="message"
+                  {...register("message", {
+                    required: true,
+                  })}
                   placeholder="Your  message (e.g. what are your commission rates?)..."
                   required
                 />
@@ -146,6 +272,7 @@ export const Contact = () => {
             </form>
           </div>
         </div>
+        <ToastContainer />
       </div>
 
       {/* Mobile */}
@@ -243,31 +370,122 @@ export const Contact = () => {
         </div>
 
         {/* Form */}
-        <form className="mobile_form mx-2 mt-3 p-3">
+        <form
+          className="mobile_form mx-2 mt-3 p-3"
+          onSubmit={handleSubmit(onSubmit)}
+          noValidate
+        >
           <h2 className="py-3">Send a message</h2>
+
+          {/* Name */}
           <div className="my-3 form-group d-flex flex-column">
+            {/* Heading */}
             <label className="mb-1">name</label>
-            <input className="p-2" type="text" placeholder="Your name..." />
-          </div>
-          <div className="form-group d-flex flex-column">
-            <label className="mb-1">email</label>
-            <input className="p-2" type="text" placeholder="Your email..." />
-          </div>
-          <div className="form-group d-flex flex-column">
-            <label className="mb-1">message</label>
-            <textarea
+
+            {/* Error Handling */}
+            {errors.name ? (
+              <small className="errorMessage text-danger pb-2">
+                {errors.name.message}
+              </small>
+            ) : null}
+
+            {/* Input */}
+            <input
               className="p-2"
               type="text"
-              placeholder="Your message..."
+              placeholder="Your name..."
+              {...register("name", {
+                required: {
+                  value: true,
+                  message: "Please enter your name",
+                },
+                maxLength: {
+                  value: 30,
+                  message: "Please use 30 characters or less",
+                },
+              })}
             />
           </div>
-          <input
-            className="mt-3 d-flex ml-auto submit_btn px-4 py-2"
-            type="submit"
-            value="Send"
-          />
+
+          {/* Email */}
+          <div className="form-group d-flex flex-column">
+            {/* Heading */}
+            <label className="mb-1">email</label>
+
+            {/* Error Handling */}
+            {errors.email ? (
+              <small className="errorMessage text-danger pb-2">
+                Please enter a valid email address
+              </small>
+            ) : null}
+
+            {/* Input */}
+            <input
+              className="p-2"
+              type="text"
+              placeholder="Your email..."
+              required
+              {...register("email", {
+                required: true,
+                pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              })}
+            />
+          </div>
+
+          {/* Subject */}
+          <div className="form-group d-flex flex-column">
+            {/* Heading */}
+            <label className="mb-1">subject</label>
+
+            {/* Error Handling */}
+            {errors.subject ? (
+              <small className="errorMessage text-danger pb-2">
+                Please enter a subject line
+              </small>
+            ) : null}
+
+            <input
+              type="text"
+              className="p-2"
+              name="subject"
+              {...register("subject", {
+                required: true,
+              })}
+              placeholder="Your message subject..."
+              required
+            />
+          </div>
+
+          {/* Message */}
+          <div className="form-group d-flex flex-column">
+            {/* Heading */}
+            <label className="mb-1">message</label>
+
+            {/* Error Handling */}
+            {errors.message ? (
+              <small className="errorMessage text-danger pb-2">
+                Please enter a message
+              </small>
+            ) : null}
+
+            {/* Input */}
+            <textarea
+              type="text"
+              className="p-2"
+              name="message"
+              {...register("message", {
+                required: true,
+              })}
+              placeholder="Your  message (e.g. what are your commission rates?)..."
+              required
+            />
+          </div>
+
+          {/* Submit Btn */}
+          <PrimaryBtn type="submit" value="send" />
         </form>
       </div>
+      <ToastContainer />
     </div>
   );
 };
