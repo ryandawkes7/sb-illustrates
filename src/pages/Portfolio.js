@@ -115,12 +115,17 @@ const ArtModal = (props) => {
         </button>
 
         {/* Content */}
-        <div className="col-11 d-flex justify-content-center">
+        <div className="col-11 d-flex justify-content-center h-75">
           {/* Image */}
           <img
             src={`${process.env.PUBLIC_URL}${props.item.image}`}
             alt={props.item.title}
-            className="w-auto h-auto"
+            className="d-block"
+            style={{
+              height: "100%",
+              width: "100%",
+              objectFit: "contain",
+            }}
           />
         </div>
       </div>
